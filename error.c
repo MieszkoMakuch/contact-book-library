@@ -3,8 +3,6 @@
 //
 
 #include <stdlib.h>
-#include <errno.h>
-#include <memory.h>
 #include <stdio.h>
 #include "error.h"
 
@@ -17,10 +15,10 @@ void cannot_allocate_memory_error() {
     throw_error("Cannot allocate memory");
 }
 
-void invalid_sort_by_attribute_error(){
+void invalid_sort_by_attribute_error() {
     throw_error("Invalid sort_by attribute. Contacts cannot be sorted.");
 }
 
-void contact_does_not_exists_error(){
+void contact_does_not_exists_error() {
     throw_error("Cannot find contact with matching attributes.");
 }

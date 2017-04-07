@@ -32,21 +32,21 @@ struct ContactList {
     struct ContactNode *last;
 };
 
-struct ContactNode* create_contact_node(struct Contact *contact);
+struct ContactNode *create_contact_node(struct Contact *contact);
 
 void delete_contact_node(struct ContactNode **contact_node);
 
-struct ContactList* create_contact_list (char *name);
+struct ContactList *create_contact_list(char *name);
 
-void delete_contact_list (struct ContactList **contactList);
+void delete_contact_list(struct ContactList **contactList);
 
 void add_contact(struct ContactList *contact_list, struct ContactNode *new_node);
 
 struct ContactNode *find_contact_node(struct ContactList contact_list,
                                       char *name, char *surname, struct Date birth_date);
 
-bool delete_contact_from_list (struct ContactList *contact_list,
-                               char *name, char *surname, struct Date birth_date);
+bool delete_contact_from_list(struct ContactList *contact_list,
+                              char *name, char *surname, struct Date birth_date);
 
 void print_contact_node(struct ContactNode contact_node);
 

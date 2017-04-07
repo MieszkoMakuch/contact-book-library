@@ -232,7 +232,7 @@ void sort_contact_list(struct ContactList *list, enum contact_sorting_attributes
     free(tmp);
 }
 
-struct ContactList *create_contact_list_from_file(char *file_name)  {
+struct ContactList *create_contact_list_from_file(char *file_name) {
     char *list_name_heap = strdup("Sample");
     struct ContactList *contact_list = create_contact_list(list_name_heap);
     add_contacts_from_csv(contact_list, NULL, file_name);

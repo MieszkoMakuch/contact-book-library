@@ -15,6 +15,7 @@
 
 #ifndef CONTACT_H
 #define CONTACT_H
+
 #include <stdbool.h>
 
 struct Date {
@@ -35,29 +36,31 @@ struct Contact {
 
 typedef int (*comparator)(struct Contact, struct Contact);
 
-enum contact_sorting_attributes {NAME,SURNAME,BIRTHDATE,EMAIL,PHONE};
+enum contact_sorting_attributes {
+    NAME, SURNAME, BIRTHDATE, EMAIL, PHONE
+};
 
-struct Contact* create_contact(char *name,
+struct Contact *create_contact(char *name,
                                char *surname,
                                struct Date birth_date,
                                char *email,
                                char *phone,
                                char *address);
 
-char* string_from_stack_to_heap(char *stack_sting);
+char *string_from_stack_to_heap(char *stack_sting);
 
-struct Contact* create_mock_contact(char *name,
+struct Contact *create_mock_contact(char *name,
                                     char *surname,
                                     struct Date birth_date,
                                     char *email,
                                     char *phone,
                                     char *address);
 
-void delete_contact (struct Contact **contact);
+void delete_contact(struct Contact **contact);
 
-struct Date create_date (int day, int month, int year);
+struct Date create_date(int day, int month, int year);
 
-void print_contact (struct Contact contact);
+void print_contact(struct Contact contact);
 
 bool contact_equals(struct Contact contact,
                     char *name, char *surname, struct Date birth_date);

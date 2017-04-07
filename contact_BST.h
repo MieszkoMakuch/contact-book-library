@@ -25,7 +25,7 @@ struct ContactBSTNode {
     struct ContactBSTNode *right;
 };
 
-struct ContactBST{
+struct ContactBST {
     struct ContactBSTNode *root;
     enum contact_sorting_attributes sorted_by_key;
     comparator cmp;
@@ -45,14 +45,14 @@ struct ContactBSTNode *contactBST_find_max(struct ContactBST *contactBST);
 
 struct ContactBST *contactBST_insert(struct ContactBST *contactBST, struct ContactBSTNode *new_node);
 
-void delete_contactBSTNode (struct ContactBSTNode **contactBST_node);
+void delete_contactBSTNode(struct ContactBSTNode **contactBST_node);
 
 struct ContactBST *contactBST_delete_contact(struct ContactBST *contactBST, struct Contact *contact_to_delete);
 
 struct ContactBSTNode *contactBST_find_by_attributes(struct ContactBST *contactBST,
-                                                    char *name, char *surname,
-                                                    struct Date birth_date,
-                                                    char *email);
+                                                     char *name, char *surname,
+                                                     struct Date birth_date,
+                                                     char *email);
 
 void contactBST_print_inorder(struct ContactBST *contactBST);
 

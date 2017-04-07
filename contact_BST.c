@@ -46,8 +46,8 @@ struct ContactBSTNode *contactBSTNode_insert(struct ContactBSTNode *node,
 }
 
 struct ContactBSTNode *rebuild_contactBSTNode(struct ContactBSTNode *node,
-                                              struct ContactBSTNode *new_tree, comparator cmp){
-    if(node == NULL) return new_tree;
+                                              struct ContactBSTNode *new_tree, comparator cmp) {
+    if (node == NULL) return new_tree;
 
     new_tree = rebuild_contactBSTNode(node->right, new_tree, cmp);
     new_tree = rebuild_contactBSTNode(node->left, new_tree, cmp);
