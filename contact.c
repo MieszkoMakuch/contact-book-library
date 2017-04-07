@@ -39,12 +39,12 @@ struct Contact* create_mock_contact(char *name,
                                     char *email,
                                     char *phone,
                                     char *address) {
-    return create_contact(string_from_stack_to_heap(name),
-                          string_from_stack_to_heap(surname),
+    return create_contact(strdup(name),
+                          strdup(surname),
                           birth_date,
-                          string_from_stack_to_heap(email),
-                          string_from_stack_to_heap(phone),
-                          string_from_stack_to_heap(address));
+                          strdup(email),
+                          strdup(phone),
+                          strdup(address));
 }
 
 void delete_contact (struct Contact **contact){
@@ -202,10 +202,4 @@ comparator get_comparator_form_atribute(enum contact_sorting_attributes attribut
             invalid_sort_by_attribute_error();
     }
     return cmp;
-}
-
-char* string_from_stack_to_heap(char *stack_sting){
-    char *heap_string = malloc(strlen(stack_sting) * sizeof(char) + 1);
-    strcpy(heap_string, stack_sting);
-    return heap_string;
 }

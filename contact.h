@@ -74,6 +74,4 @@ int compare_contacts_by_phone(struct Contact contact1, struct Contact contact2);
 
 comparator get_comparator_form_atribute(enum contact_sorting_attributes attribute);
 
-char* string_from_stack_to_heap(char *stack_sting);
-
 #endif //CONTACT_H

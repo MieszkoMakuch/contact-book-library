@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "contact_list.h"
 #include "error.h"
 #include "read_data.h"
@@ -42,7 +43,7 @@ struct ContactList *create_contact_list(char *name) {
 // Allocates list name dynamically so that it can be deleted
 // using delete_contact_list function without errors
 struct ContactList *create_tmp_contact_list(char *name) {
-    return create_contact_list(string_from_stack_to_heap(name));
+    return create_contact_list(strdup(name));
 }
 
 void delete_contact_list(struct ContactList **contactList) {
@@ -232,7 +233,7 @@ void sort_contact_list(struct ContactList *list, enum contact_sorting_attributes
 }
 
 struct ContactList *create_contact_list_from_file(char *file_name)  {
-    char *list_name_heap = string_from_stack_to_heap("Sample");
+    char *list_name_heap = strdup("Sample");
     struct ContactList *contact_list = create_contact_list(list_name_heap);
     add_contacts_from_csv(contact_list, NULL, file_name);
     return contact_list;
