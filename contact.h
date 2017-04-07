@@ -2,8 +2,19 @@
 // Created by Mieszko Makuch on 12.03.2017.
 //
 
-#ifndef ZEWTAW1_CONTACT_H
-#define ZEWTAW1_CONTACT_H
+/**
+ * @file contact.h
+ *
+ * @brief Single contact node
+ *
+ * A contact contains information about name, surname, birth date, email, phone and address.
+ *
+ * To create a contact, use @ref create_date and @ref create_contact. To destroy a
+ * contact, use @ref delete_contact.
+ */
+
+#ifndef CONTACT_H
+#define CONTACT_H
 #include <stdbool.h>
 
 struct Date {
@@ -65,4 +76,4 @@ comparator get_comparator_form_atribute(enum contact_sorting_attributes attribut
 
 char* string_from_stack_to_heap(char *stack_sting);
 
-#endif //ZEWTAW1_CONTACT_H
+#endif //CONTACT_H

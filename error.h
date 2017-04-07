@@ -2,12 +2,8 @@
 // Created by Mieszko Makuch on 12.03.2017.
 //
 
-#ifndef ZEWTAW1_ERROR_H
-#define ZEWTAW1_ERROR_H
-
-/**
- * Print error and exit(1), if the memory cannot be allocated
- */
+#ifndef ERROR_H
+#define ERROR_H
 
 void throw_error(const char message[]);
 
@@ -17,5 +13,5 @@ void invalid_sort_by_attribute_error();
 
 void contact_does_not_exists_error();
 
-#endif //ZEWTAW1_ERROR_H\
+#endif //ERROR_H
 

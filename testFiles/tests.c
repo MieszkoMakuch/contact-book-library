@@ -2,7 +2,14 @@
 // Created by Mieszko Makuch on 16.03.2017.
 //
 
-#include <dlfcn.h>
+/**
+ * @file tests.c
+ *
+ * @brief Test correctness and time complexity of the following contact book implementations:
+ *  -binary search tree
+ *  -linked list
+ */
+
 #include <stdio.h>
 #include <sys/times.h>
 #include <time.h>

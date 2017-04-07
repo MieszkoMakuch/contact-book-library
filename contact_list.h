@@ -2,10 +2,22 @@
 // Created by Mieszko Makuch on 11.03.2017.
 //
 
+/**
+ * @file contact_BST.h
+ *
+ * @brief Contact book implemented using linked list.
+ *
+ * A contact contains information about contacts name, surname, birth date, email, phone and address.
+ * It may be rebuild/sorted by one of the following keys: NAME, SURNAME, BIRTHDATE, EMAIL, PHONE
+ *
+ * To create a contact book, use @ref create_contact_list. To destroy a
+ * contact bok, use @ref delete_contact_list.
+ */
+
 #include "contact.h"
 
-#ifndef ZEWTAW1_CLIST_H
-#define ZEWTAW1_CLIST_H
+#ifndef CONTACT_LIST_H
+#define CONTACT_LIST_H
 
 struct ContactNode {
     struct Contact *contact;
@@ -44,4 +56,4 @@ void sort_contact_list(struct ContactList *list, enum contact_sorting_attributes
 
 struct ContactList *create_contact_list_from_file(char *file_name);
 
-#endif //ZEWTAW1_CLIST_H
+#endif //CONTACT_LIST_H

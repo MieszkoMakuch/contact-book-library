@@ -23,7 +23,7 @@ ssize_t get_line_without_new_line(char **lineptr, size_t *len, FILE *stream) {
 void add_contacts_from_csv(struct ContactList *contact_list,
                            struct ContactBST *contactBST,
                            char *file_name) {
-    if (!contact_list && !contactBST) { printf("ERROR: At least one structure cannot be null\n"); }
+    if (!contact_list && !contactBST) { throw_error("ERROR: At least one structure cannot be null"); }
 
     // Open the file (to read - r)
     FILE *handler = fopen(file_name, "r");
@@ -101,7 +101,9 @@ void add_contacts_from_csv(struct ContactList *contact_list,
 
     // Close the file
     if (fclose(handler) == EOF) {
-        printf("ERROR: Cannot close the file: %s\n", file_name);
+        char file_error_msg[100];
+        sprintf(file_error_msg, "ERROR: Cannot close the file: %s", file_name);
+        throw_error(file_error_msg);
         return;
     }
 }
