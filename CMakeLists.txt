@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.7)
-project(contactBookLibraryGitHub)
+project(contact-book-library)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -16,4 +16,4 @@ set(SOURCE_FILES
         read_data.c
         read_data.h testFiles/tests.c)
 
-add_executable(contactBookLibraryGitHub ${SOURCE_FILES})
+add_library(contact-book-library ${SOURCE_FILES})
